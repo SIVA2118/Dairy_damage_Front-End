@@ -1,0 +1,124 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Filters Top-Right */
+.filter-section {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin: 0 0 20px auto;
+  flex-wrap: wrap;
+}
+
+.filter-section input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Card Container */
+.card-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  text-align: left;
+  max-height: 80vh;
+  overflow-y: auto;
+  font-size: 0; /* Remove inline-block spacing */
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+  width: auto;              /*3 cards per row with margin */
+  margin: 1.5%;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-header {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d9534f;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.card .product-name {
+  font-weight: bold;
+  color: #007bff;
+}
+
+button {
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.time {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .card {
+    width: calc(50% - 20px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%; /* 1 card per row */
+    margin: 10px 0;
+  }
+
+  .filter-section {
+    justify-content: center;
+  }
+}

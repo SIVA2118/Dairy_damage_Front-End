@@ -1,0 +1,143 @@
+/* General container styles */
+.extra-damage-container {
+  padding: 40px 30px;
+  max-width: 850px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: auto;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Title style */
+.extra-damage-container h2 {
+  margin-bottom: 25px;
+  font-size: 32px;
+  color: #222;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+/* Form Section (Grid) */
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Hover effect for the entire container */
+.extra-damage-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Form input styles */
+.form-section input {
+  padding: 14px 20px;
+  width: 100%;
+  max-width: 340px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  font-size: 16px;
+  transition: 0.3s ease;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  color: #333;
+}
+
+.form-section input:focus {
+  outline: none;
+  border-color: #7f5af0;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Camera Section Styles */
+.camera-section video {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.camera-section:hover video {
+  transform: scale(1.08);
+}
+
+/* Preview Section Styles */
+.preview-section {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.preview-section h4 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.preview-section img {
+  width: 260px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.preview-section img:hover {
+  transform: scale(1.1);
+}
+
+/* Button Styles */
+.start-btn,
+.capture-btn,
+.stop-btn,
+.submit-btn {
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin: 12px;
+  font-weight: 600;
+}
+
+.start-btn:hover,
+.capture-btn:hover,
+.stop-btn:hover,
+.submit-btn:hover {
+  background: #5a38c5;
+  transform: translateY(-4px);
+}
+
+/* Special Button Styles */
+.stop-btn {
+  background: #ff5c5c;
+}
+
+.stop-btn:hover {
+  background: #e63946;
+}
+
+.submit-btn {
+  background: #00c896;
+}
+
+.submit-btn:hover {
+  background: #00b383;
+}

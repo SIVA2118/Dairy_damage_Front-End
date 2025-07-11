@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  margin-top: 18%;
+  font-family: 'Poppins', sans-serif;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+
+/* Outer container */
+.records-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* 👈 wrap to next line after 4 cards */
+  gap: 15px;
+  width: 100%;
+  min-height: 30vh;
+  box-sizing: border-box;
+  justify-content: center; /* 👈 center the cards nicely */
+}
+
+.record-card {
+  flex: 0 0 calc(25% - 15px); /* 👈 4 cards per row */
+  max-width: calc(25% - 15px);
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.record-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll inside card */
+.record-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.record-card::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.record-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.record-card h3 {
+  margin-top: 0;
+  color: #3498db;
+  font-size: 24px;
+}
+
+.product-section {
+  margin-top: 15px;
+}
+
+.product-section h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #555;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.record-image {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Two-Column (Milk and Curd Details) */
+.details-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.milk-section,
+.curd-section {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.milk-section h4,
+.curd-section h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #3498db;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* Responsive: On small screens, show 2 per row or 1 */
+@media (max-width: 1024px) {
+  .record-card {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 600px) {
+  .record-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
